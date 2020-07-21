@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    border: blue 1px solid;
+    border-radius: 1rem;
+    width: 20%;
+}
+
+.content {
+    text-align: center;
+    font-size: 6rem;
+}
+
+.divHeart {
+    margin-top: -1rem;
+}
+
+.heart::before {
+    content: '\2665';
+    font-size: 7rem;
+}
+
+.spade::before {
+    content: '\2660';
+    font-size: 7rem;
+}
+
+.loz::before {
+    content: '\25CA';
+    font-size: 7rem;
+}
+
+.clubs::before {
+    content: '\2663';
+    font-size: 7rem;
+}
+
+.diams::before {
+    content: '\2666';
+    font-size: 7rem;
+}
+
+.colorRed {
+    color: red
+}
+
+.colorBlack {
+    color: black;
+}
+
+.positionTop {
+    margin-left: 1rem;
+}
+
+.positionBottom {
+    margin-left: 12rem;
+}
