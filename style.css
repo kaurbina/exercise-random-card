@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: green;
 }
 
 .container {
@@ -20,6 +20,7 @@ body {
     border: blue 1px solid;
     border-radius: 1rem;
     width: 20%;
+    height: 23rem;
 }
 
 .content {
@@ -33,41 +34,45 @@ body {
 
 .heart::before {
     content: '\2665';
-    font-size: 7rem;
+    font-size: 6rem;
+    color: red;
 }
 
 .spade::before {
     content: '\2660';
-    font-size: 7rem;
+    font-size: 6rem;
 }
 
 .loz::before {
     content: '\25CA';
-    font-size: 7rem;
+    font-size: 6rem;
 }
 
 .clubs::before {
     content: '\2663';
-    font-size: 7rem;
+    font-size: 6rem;
 }
 
 .diams::before {
     content: '\2666';
-    font-size: 7rem;
+    font-size: 6rem;
+    color: red;
 }
 
-.colorRed {
+/* .colorRed {
     color: red
-}
+} */
 
-.colorBlack {
+/* .colorBlack {
     color: black;
-}
+} */
 
 .positionTop {
     margin-left: 1rem;
 }
 
 .positionBottom {
-    margin-left: 12rem;
+    margin-left: 11rem;
+    position: absolute;
+    bottom: 2rem;
 }

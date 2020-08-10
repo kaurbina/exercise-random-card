@@ -20,8 +20,6 @@ document.getElementsByTagName("div")[2].setAttribute("class", "divTop");
 
 let singleTop = document.createElement("p");
 document.querySelector(".divTop").appendChild(singleTop);
-// document.getElementsByTagName("p")[0].setAttribute("class", "heart");
-// document.getElementsByTagName("p")[0].setAttribute("class", heart.getAttribute('class') + ' positionTop');
 document.getElementsByTagName("p")[0].setAttribute("id", "singleTop");
 
 let divContent = document.createElement("div");
@@ -32,7 +30,6 @@ let content = document.createElement("p");
 document.querySelector(".divContent").appendChild(content);
 document.getElementsByTagName("p")[1].setAttribute("class", "content");
 document.getElementsByTagName("p")[1].setAttribute("id", "content");
-// document.getElementById("content").innerHTML = 2;
 
 let divBottom = document.createElement("div");
 let att1 = document.createAttribute("style");
@@ -43,8 +40,6 @@ document.getElementsByTagName("div")[4].setAttribute("class", "divBottom");
 
 let singleBottom = document.createElement("p");
 document.querySelector(".divBottom").appendChild(singleBottom);
-// document.getElementsByTagName("p")[2].setAttribute("class", "heart");
-// document.getElementsByTagName("p")[2].setAttribute("class", heartBottom.getAttribute('class') +' positionBottom');
 document.getElementsByTagName("p")[2].setAttribute("id", "singleBottom");
 
 function loadCards () {
@@ -53,26 +48,24 @@ function loadCards () {
     
     let cardBottom =  document.getElementById("singleBottom");  
         
-    let color = ['colorBlack', 'colorRed'];
-
     let cards = ['heart', 'spade', 'loz', 'clubs', 'diams'];
 
     let numbers = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']; 
     
     let singleCard = cards[Math.floor(Math.random() * cards.length)];
     
-    let singleColor = color[Math.floor(Math.random() * color.length)];
-    
     let singleNumber = numbers[Math.floor(Math.random() * numbers.length)];
     
     cardTop.setAttribute("class", singleCard);
-    cardTop.setAttribute("class", cardTop.getAttribute('class') +' '+ singleColor);
     cardTop.setAttribute("class", cardTop.getAttribute('class') +' positionTop');
 
     document.getElementById("content").innerHTML = singleNumber;
 
     cardBottom.setAttribute("class", singleCard);
-    cardBottom.setAttribute("class", singleBottom.getAttribute('class') +' '+ singleColor);
     cardBottom.setAttribute("class", singleBottom.getAttribute('class') +' positionBottom');
 
+}
+
+window.onload = () => {
+    loadCards();
 }
